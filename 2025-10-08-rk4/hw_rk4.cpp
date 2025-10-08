@@ -24,7 +24,7 @@ int main(void)
     initial_conditions(S, 0.0);
 
     double dt = 0.01;
-    double tf = 40.0;
+    double tf = 50.0;
     integrate_rk4(fderiv, S, 0.0, tf, dt, params, print);
 
     return 0;
@@ -43,9 +43,9 @@ void fderiv(const state_t & s, state_t & dsdt, double t, params_t & params)
 
 void initial_conditions(state_t & s, double t0)
 {
-  s[0] = 10.0;
-  s[1] = 1.0;
-  s[2] = 1.0;
+  s[0] = 1.0;
+  s[1] = 0.0;
+  s[2] = 0.0;
 }
 
 void print(const state_t & s, double t)
