@@ -1,3 +1,5 @@
+all: fig.pdf
+
 hw.x: hw_rk4.cpp
 	g++ -std=c++23 hw_rk4.cpp -o hw.x
 
